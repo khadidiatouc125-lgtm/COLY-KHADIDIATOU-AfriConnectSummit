@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AfriConnectSummit - le plus grand sommet Tech d'Afrique de l'Ouest à Dakar</title>
+    <!-- GOOGLE FONTS -->
+    <link rel="stylesheet" href="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+    
+    <!-- Notre feuille de style personnalisée -->>
+    <link rel="stylesheet" href="CSS/style.css">
+    <!-- ICONS BOOSTRAP -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boostrap-icons@1.11.3/font/boostrap-icons.min.css"> 
+    
+</head>
+<body>
+        <!-- NAVBAR FIXE -->
+    <header>
+        <nav class="navbar" aria-label="Navigation principale">
+            <div class="logo"><strong>AfriConnect Summit 2026</strong></div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Accueil</a></li>
+                <li><a href="programme.html">Programme</a></li>
+                <li><a href="intervenants.html">Intervenants</a></li>
+                <li><a href="contact.html">Inscription</a></li>
+            </ul>
+            <div class="nav-tools">
+                <button id="themeToggleBtn" class="theme-toggle" aria-label="Changer de thème">
+                    <i class="bi bi-moon-fill"></i>
+                </button>
+                <button id="hamburgerBtn" class="hamburger" aria-label="Ouvrir le menu mobile">
+                    <i class="bi bi-list"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- SECTION HERO (Plein écran + Compte à rebours) -->
+        <section class="hero-home">
+            <h1>L'avenir de la Tech<br><span class="hero-highlight">se dessine en Afrique</span></h1>
+            <p><i class="bi bi-geo-alt"></i> Dakar, Sénégal &middot; <i class="bi bi-calendar3"></i> 12 au 14 Novembre 2026</p>
+            
+            <div class="hero-ctas">
+                <a href="contact.html" class="btn btn-primary">Réserver mon pass</a>
+                <a href="programme.html" class="btn btn-secondary">Voir le programme</a>
+            </div>
+
+            <!-- Compte à rebours géré par JavaScript -->
+            <div id="countdown" class="countdown-container">
+                <div class="countdown-item"><span id="days">00</span>jours</div>
+                <div class="countdown-item"><span id="hours">00</span>heures</div>
+                <div class="countdown-item"><span id="minutes">00</span>mins</div>
+                <div class="countdown-item"><span id="seconds">00</span>secs</div>
+            </div>
+        </section>
+
+        <!-- SECTION CHIFFRES CLÉS (Compteurs JS au scroll) -->
+        <section id="stat-section" class="grid-4cols fade-in-scroll">
+            <div class="stat-card">
+                <h2>+<span class="counter-value" data-target="1200">0</span></h2>
+                <p>Participants</p>
+            </div>
+            <div class="stat-card">
+                <h2><span class="counter-value" data-target="48">0</span></h2>
+                <p>Intervenants</p>
+            </div>
+            <div class="stat-card">
+                <h2><span class="counter-value" data-target="3">0</span></h2>
+                <p>Jours</p>
+            </div>
+            <div class="stat-card">
+                <h2><span class="counter-value" data-target="12">0</span></h2>
+                <p>Pays</p>
+            </div>
+        </section>
+
+        <!-- SECTION POURQUOI PARTICIPER (Flexbox) -->
+        <section class="features-section fade-in-scroll">
+            <h2 class="section-title">Pourquoi participer ?</h2>
+            <div class="features-container">
+                <article class="feature-card">
+                    <i class="bi bi-lightbulb feature-icon"></i>
+                    <h3>Inspiration</h3>
+                    <p>Découvrez les tendances futures de l'écosystème numérique africain.</p>
+                </article>
+                <article class="feature-card">
+                    <i class="bi bi-people feature-icon"></i>
+                    <h3>Networking</h3>
+                    <p>Rencontrez des développeurs, entrepreneurs et investisseurs du continent.</p>
+                </article>
+                <article class="feature-card">
+                    <i class="bi bi-briefcase feature-icon"></i>
+                    <h3>Opportunités</h3>
+                    <p>Accédez à des sessions de pitchs exclusifs et accélérez vos projets.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- SECTION INTERVENANTS VEDETTES (4 cartes en CSS Grid) -->
+        <section class="featured-speakers fade-in-scroll">
+            <h2 class="section-title">Intervenants Vedettes</h2>
+            <div class="grid-4cols container-reset">
+                <article class="speaker-card">
+                    <img src="https://unsplash.com" alt="Portrait de Amina Diallo">
+                    <h3>Amina Diallo</h3>
+                    <p class="speaker-role">Experte Vision par Ordinateur</p>
+                    <p class="speaker-country">Sénégal</p>
+                </article>
+                <article class="speaker-card">
+                    <img src="https://unsplash.com" alt="Portrait de Kofi Mensah">
+                    <h3>Kofi Mensah</h3>
+                    <p class="speaker-role">Fondateur Pan-African VC</p>
+                    <p class="speaker-country">Ghana</p>
+                </article>
+                <article class="speaker-card">
+                    <img src="https://unsplash.com" alt="Portrait de Fatou Camara">
+                    <h3>Fatou Camara</h3>
+                    <p class="speaker-role">Product Designer Senior</p>
+                    <p class="speaker-country">Côte d'Ivoire</p>
+                </article>
+                <article class="speaker-card">
+                    <img src="https://unsplash.com" alt="Portrait de Samuel Okechukwu">
+                    <h3>Samuel Okechukwu</h3>
+                    <p class="speaker-role">Architecte Big Data</p>
+                    <p class="speaker-country">Nigeria</p>
+                </article>
+            </div>
+            <div class="center-btn-container">
+                <a href="intervenants.html" class="btn btn-secondary">Voir tous les intervenants</a>
+            </div>
+        </section>
+
+        <!-- SECTION SPONSORS (3 niveaux distincts en Flexbox) -->
+        <section class="sponsors-zone fade-in-scroll">
+            <h2 class="section-title-sponsors">Nos Sponsors</h2>
+            
+            <div class="sponsor-level lvl-gold">
+                <img src="https://unsplash.com" alt="Logo Sponsor Or Fictif 1">
+                <img src="https://unsplash.com" alt="Logo Sponsor Or Fictif 2">
+            </div>
+            
+            <div class="sponsor-level lvl-silver">
+                <img src="https://unsplash.com" alt="Logo Sponsor Argent Fictif 1">
+                <img src="https://unsplash.com" alt="Logo Sponsor Argent Fictif 2">
+            </div>
+            
+            <div class="sponsor-level lvl-bronze">
+                <img src="https://unsplash.com" alt="Logo Sponsor Bronze Fictif 1">
+            </div>
+        </section>
+    </main>
+
+    <!-- BOUTON RETOUR EN HAUT -->
+    <button id="backToTop" aria-label="Retourner en haut de la page"><i class="bi bi-arrow-up"></i></button>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>AfriConnect</h3>
+                <p>Le carrefour annuel de l'écosystème numérique africain.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Liens Rapides</h3>
+                <p><a href="programme.html">Programme</a></p>
+                <p><a href="contact.html">S'inscrire</a></p>
+            </div>
+            <div class="footer-col">
+                <h3>Suivez-nous</h3>
+                <div class="social-links">
+                    <a href="#" aria-label="Lien Twitter"><i class="bi bi-twitter-x"></i></a>
+                    <a href="#" aria-label="Lien LinkedIn"><i class="bi bi-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; <span class="dynamic-year"></span> AfriConnect Summit. Tous droits réservés. Examen Web L1.
+        </div>
+    </footer>
+
+    <!-- Script principal -->
+    <script src="js/main.js"></script>
+
+    
+    
+</body>
+</html>

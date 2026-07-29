@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AfriConnectSummit - Contact</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <!-- NAVBAR FIXE -->
+    <header>
+        <nav class="navbar" aria-label="Navigation principale">
+            <div class="logo"><strong>AfriConnect Summit 2026</strong></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="programme.html">Programme</a></li>
+                <li><a href="intervenants.html">Intervenants</a></li>
+                <li><a href="contact.html" class="active">Inscription</a></li>
+            </ul>
+            <div class="nav-tools">
+                <button id="themeToggleBtn" class="theme-toggle" aria-label="Changer de thème">
+                    <i class="bi bi-moon-fill"></i>
+                </button>
+                <button id="hamburgerBtn" class="hamburger" aria-label="Ouvrir le menu mobile">
+                    <i class="bi bi-list"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- HERO INTERNE -->
+        <section class="internal-hero">
+            <h1>Inscription &amp; Contact</h1>
+            <nav class="breadcrumb" aria-label="Fil d'Ariane">
+                <a href="index.html">Accueil</a> &gt; <span>Contact</span>
+            </nav>
+        </section>
+
+        <!-- CONTAINER PRINCIPAL EN 2 COLONNES FLEXBOX -->
+        <section class="contact-wrapper">
+            
+            <!-- FORMULAIRE D'INSCRIPTION (GAUCHE) -->
+            <div class="form-side">
+                <div id="successAlert" class="success-alert">
+                    <i class="bi bi-check-circle-fill"></i> Inscription validée avec succès ! Un e-mail de confirmation vous a été envoyé.
+                </div>
+
+                <form id="registrationForm" novalidate>
+                    <div class="form-group">
+                        <label for="fullName">Nom complet *</label>
+                        <input type="text" id="fullName" class="form-control" placeholder="Ex: Jean Paul">
+                        <div class="error-msg"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Adresse Email *</label>
+                        <input type="email" id="email" class="form-control" placeholder="Ex: contact@domain.com">
+                        <div class="error-msg"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Numéro de téléphone *</label>
+                        <input type="tel" id="phone" class="form-control" placeholder="Minimum 8 chiffres">
+                        <div class="error-msg"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ticketType">Type de participation *</label>
+                        <select id="ticketType" class="form-control">
+                            <option value="standard">Standard - Accès Conférences</option>
+                            <option value="premium">Premium - Conférences &amp; Workshops</option>
+                            <option value="vip">VIP - Accès complet &amp; Espace Networking</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="country">Pays africain représenté *</label>
+                        <select id="country" class="form-control">
+                            <!-- Minimum 10 pays exigés -->
+                            <option value="SN">Sénégal</option>
+                            <option value="CI">Côte d'Ivoire</option>
+                            <option value="BF">Burkina Faso</option>
+                            <option value="ML">Mali</option>
+                            <option value="GN">Guinée</option>
+                            <option value="TG">Togo</option>
+                            <option value="BJ">Bénin</option>
+                            <option value="CM">Cameroun</option>
+                            <option value="GA">Gabon</option>
+                            <option value="CD">RDC</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="motivation">Message ou Motivations *</label>
+                        <textarea id="motivation" class="form-control" rows="5" placeholder="Minimum 20 caractères pour valider votre demande..."></textarea>
+                        <div class="error-msg"></div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-submit-full">Valider mon inscription</button>
+                </form>
+            </div>
+
+            <!-- FAQ ACCORDÉON CSS PUR & MAP (DROITE) -->
+            <div class="info-side">
+                <h2 class="faq-section-title">Questions Fréquentes</h2>
+                
+                <!-- Accordéon CSS Pur (5 questions exigées) -->
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <input type="checkbox" id="faq1">
+                        <label for="faq1" class="accordion-title">Où se déroule l'événement ?</label>
+                        <div class="accordion-content">
+                            <p>Le sommet se tiendra au Centre International de Conférences de Dakar (CICAD), Sénégal.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <input type="checkbox" id="faq2">
+                        <label for="faq2" class="accordion-title">Les certificats sont-ils fournis ?</label>
+                        <div class="accordion-content">
+                            <p>Oui, une attestation nominative de participation numérique sera envoyée à chaque inscrit après l'événement.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <input type="checkbox" id="faq3">
+                        <label for="faq3" class="accordion-title">Puis-je annuler mon pass ?</label>
+                        <div class="accordion-content">
+                            <p>Toute annulation est possible et entièrement remboursable jusqu'à 14 jours avant l'ouverture du sommet.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <input type="checkbox" id="faq4">
+                        <label for="faq4" class="accordion-title">Y a-t-il des tarifs étudiants ?</label>
+                        <div class="accordion-content">
+                            <p>Tout à fait, une réduction de 50% s'applique sur présentation d'une carte d'étudiant valide lors du contrôle.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <input type="checkbox" id="faq5">
+                        <label for="faq5" class="accordion-title">Comment devenir sponsor ?</label>
+                        <div class="accordion-content">
+                            <p>Contactez notre équipe de relations publiques directement via l'adresse e-mail dédiée disponible en pied de page.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARTE GOOGLE MAPS INTÉGRÉE (<iframe>) -->
+                <h2 class="map-section-title">Localisation</h2>
+                <div class="map-wrapper-box">
+                    <iframe src="https://google.com" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Carte interactive du lieu de l'événement"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- BOUTON RETOUR EN HAUT -->
+    <button id="backToTop" aria-label="Retourner en haut de la page"><i class="bi bi-arrow-up"></i></button>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>AfriConnect</h3>
+                <p>Le carrefour annuel de l'écosystème numérique africain.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Liens Rapides</h3>
+                <p><a href="programme.html">Programme</a></p>
+                <p><a href="contact.html">S'inscrire</a></p>
+            </div>
+            <div class="footer-col">
+                <h3>Suivez-nous</h3>
+                <div class="social-links">
+                    <a href="#" aria-label="Lien Twitter"><i class="bi bi-twitter-x"></i></a>
+                    <a href="#" aria-label="Lien LinkedIn"><i class="bi bi-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; <span class="dynamic-year"></span> AfriConnect Summit. Tous droits réservés. Examen Web L1.
+        </div>
+    </footer>
+
+    <!-- Script principal -->
+    <script src="js/main.js"></script>
+    
+</body>
+</html>

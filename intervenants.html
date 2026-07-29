@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AfriConnectSummit - Intervenants</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body> <!-- NAVBAR FIXE -->
+    <header>
+        <nav class="navbar" aria-label="Navigation principale">
+            <div class="logo"><strong>AfriConnect Summit 2026</strong></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="programme.html">Programme</a></li>
+                <li><a href="intervenants.html" class="active">Intervenants</a></li>
+                <li><a href="contact.html">Inscription</a></li>
+            </ul>
+            <div class="nav-tools">
+                <button id="themeToggleBtn" class="theme-toggle" aria-label="Changer de thème">
+                    <i class="bi bi-moon-fill"></i>
+                </button>
+                <button id="hamburgerBtn" class="hamburger" aria-label="Ouvrir le menu mobile">
+                    <i class="bi bi-list"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- HERO INTERNE -->
+        <section class="internal-hero">
+            <h1>Nos Intervenants</h1>
+            <nav class="breadcrumb" aria-label="Fil d'Ariane">
+                <a href="index.html">Accueil</a> &gt; <span>Intervenants</span>
+            </nav>
+        </section>
+
+        <!-- FILTRAGE DYNAMIQUE JAVASCRIPT -->
+        <section class="filter-section">
+            <div class="filter-container">
+                <button class="filter-btn active" data-filter="all">Tous</button>
+                <button class="filter-btn" data-filter="ia">IA &amp; Tech</button>
+                <button class="filter-btn" data-filter="business">Business</button>
+                <button class="filter-btn" data-filter="design">Design</button>
+                <button class="filter-btn" data-filter="data">Data</button>
+            </div>
+        </section>
+
+        <!-- GRILLE D'INTERVENANTS (9 CARTES EXIGÉES) -->
+        <section class="speakers-grid-section">
+            <div class="grid-4cols container-reset">
+                <!-- Intervenant 1 - IA -->
+                <article class="speaker-card speaker-item" data-category="ia">
+                    <img src="images/orateur1.jpg" alt="Portrait de Amina Diallo">
+                    <h3>Amina Diallo</h3>
+                    <p class="speaker-role">Experte Vision par Ordinateur</p>
+                    <p class="speaker-country">Sénégal</p>
+                </article>
+
+                <!-- Intervenant 2 - Business -->
+                <article class="speaker-card speaker-item" data-category="business">
+                    <img src="images/orateur2.jpg" alt="Portrait de Kofi Mensah">
+                    <h3>Kofi Mensah</h3>
+                    <p class="speaker-role">Fondateur Pan-African VC</p>
+                    <p class="speaker-country">Ghana</p>
+                </article>
+
+                <!-- Intervenant 3 - Design -->
+                <article class="speaker-card speaker-item" data-category="design">
+                    <img src="images/orateur3.jpg" alt="Portrait de Fatou Camara">
+                    <h3>Fatou Camara</h3>
+                    <p class="speaker-role">Product Designer Senior</p>
+                    <p class="speaker-country">Côte d'Ivoire</p>
+                </article>
+
+                <!-- Intervenant 4 - Data -->
+                <article class="speaker-card speaker-item" data-category="data">
+                    <img src="images/orateur4.jpg" alt="Portrait de Samuel Okechukwu">
+                    <h3>Samuel Okechukwu</h3>
+                    <p class="speaker-role">Architecte de Données Big Data</p>
+                    <p class="speaker-country">Nigeria</p>
+                </article>
+
+                <!-- Intervenant 5 - IA -->
+                <article class="speaker-card speaker-item" data-category="ia">
+                    <img src="images/orateur5.jpg" alt="Portrait de Dr. Eliane Zongo">
+                    <h3>Dr. Eliane Zongo</h3>
+                    <p class="speaker-role">Chercheuse NLP Africain</p>
+                    <p class="speaker-country">Burkina Faso</p>
+                </article>
+
+                <!-- Intervenant 6 - Business -->
+                <article class="speaker-card speaker-item" data-category="business">
+                    <img src="images/orateur6.jpg" alt="Portrait de Tariq Yusuf">
+                    <h3>Tariq Yusuf</h3>
+                    <p class="speaker-role">Directeur Incubation &amp; Stratégie</p>
+                    <p class="speaker-country">Maroc</p>
+                </article>
+
+                <!-- Intervenant 7 - Design -->
+                <article class="speaker-card speaker-item" data-category="design">
+                    <img src="images/orateur7.jpg" alt="Portrait de Zola Mbeki">
+                    <h3>Zola Mbeki</h3>
+                    <p class="speaker-role">Spécialiste Identités Visuelles</p>
+                    <p class="speaker-country">Afrique du Sud</p>
+                </article>
+
+                <!-- Intervenant 8 - Data -->
+                <article class="speaker-card speaker-item" data-category="data">
+                    <img src="images/orateur8.jpg" alt="Portrait de Moïse Tounkara">
+                    <h3>Moïse Tounkara</h3>
+                    <p class="speaker-role">Analyste d'Impact Data-Driven</p>
+                    <p class="speaker-country">Guinée</p>
+                </article>
+
+                <!-- Intervenant 9 - IA -->
+                <article class="speaker-card speaker-item" data-category="ia">
+                    <img src="images/orateur9.jpg" alt="Portrait de Chana Kimani">
+                    <h3>Chana Kimani</h3>
+                    <p class="speaker-role">Développeuse IA Générative</p>
+                    <p class="speaker-country">Kenya</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- BOUTON RETOUR EN HAUT -->
+    <button id="backToTop" aria-label="Retourner en haut de la page"><i class="bi bi-arrow-up"></i></button>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>AfriConnect</h3>
+                <p>Le carrefour annuel de l'écosystème numérique africain.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Liens Rapides</h3>
+                <p><a href="programme.html">Programme</a></p>
+                <p><a href="contact.html">S'inscrire</a></p>
+            </div>
+            <div class="footer-col">
+                <h3>Suivez-nous</h3>
+                <div class="social-links">
+                    <a href="#" aria-label="Lien Twitter"><i class="bi bi-twitter-x"></i></a>
+                    <a href="#" aria-label="Lien LinkedIn"><i class="bi bi-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; <span class="dynamic-year"></span> AfriConnect Summit. Tous droits réservés. Examen Web L1.
+        </div>
+    </footer>
+
+    <!-- Script principal -->
+    <script src="js/main.js"></script>
+
+
+    
+</body>
+</html>

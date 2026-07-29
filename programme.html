@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AfriConnectSummit - Programme</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+     <!-- NAVBAR FIXE -->
+    <header>
+        <nav class="navbar" aria-label="Navigation principale">
+            <div class="logo"><strong>AfriConnect Summit 2026</strong></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="programme.html" class="active">Programme</a></li>
+                <li><a href="intervenants.html">Intervenants</a></li>
+                <li><a href="contact.html">Inscription</a></li>
+            </ul>
+            <div class="nav-tools">
+                <button id="themeToggleBtn" class="theme-toggle" aria-label="Changer de thème">
+                    <i class="bi bi-moon-fill"></i>
+                </button>
+                <button id="hamburgerBtn" class="hamburger" aria-label="Ouvrir le menu mobile">
+                    <i class="bi bi-list"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- HERO INTERNE -->
+        <section class="internal-hero">
+            <h1>Programme du Sommet</h1>
+            <nav class="breadcrumb" aria-label="Fil d'Ariane">
+                <a href="index.html">Accueil</a> &gt; <span>Programme</span>
+            </nav>
+        </section>
+
+        <!-- NAVIGATION PAR ONGLETS -->
+        <section class="tabs-container">
+            <button class="tab-btn active" data-day="day1">Jour 1 - 12 Nov</button>
+            <button class="tab-btn" data-day="day2">Jour 2 - 13 Nov</button>
+            <button class="tab-btn" data-day="day3">Jour 3 - 14 Nov</button>
+        </section>
+
+        <!-- CONTENU DES ONGLETS -->
+        <section class="program-sections">
+            <!-- CONTENU JOUR 1 -->
+            <div id="day1" class="tab-content active">
+                <table class="program-table">
+                    <thead>
+                        <tr>
+                            <th>Horaires</th>
+                            <th>Sessions &amp; Thématiques</th>
+                            <th>Intervenants</th>
+                            <th>Lieu</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>08:30 - 09:30</td>
+                            <td>Accueil des participants et enregistrement</td>
+                            <td>Équipe d'organisation</td>
+                            <td>Hall Principal</td>
+                        </tr>
+                        <tr>
+                            <td>09:30 - 11:00</td>
+                            <td>Cérémonie d'ouverture &amp; Discours d'introduction</td>
+                            <td>M. Robert Diassé &amp; Invités d'Honneur</td>
+                            <td>Auditorium A</td>
+                        </tr>
+                        <tr>
+                            <td>11:30 - 13:00</td>
+                            <td>Keynote : L'état de l'intelligence artificielle en Afrique</td>
+                            <td>Amina Diallo</td>
+                            <td>Auditorium A</td>
+                        </tr>
+                        <tr>
+                            <td>14:30 - 16:00</td>
+                            <td>Table ronde : Financer les startups numériques africaines</td>
+                            <td>Kofi Mensah</td>
+                            <td>Salle Horizon</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- CONTENU JOUR 2 -->
+            <div id="day2" class="tab-content">
+                <table class="program-table">
+                    <thead>
+                        <tr>
+                            <th>Horaires</th>
+                            <th>Sessions &amp; Thématiques</th>
+                            <th>Intervenants</th>
+                            <th>Lieu</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>09:00 - 10:30</td>
+                            <td>Workshop : Concevoir des produits centrés sur l'utilisateur</td>
+                            <td>Fatou Camara</td>
+                            <td>Lab Design</td>
+                        </tr>
+                        <tr>
+                            <td>11:00 - 12:30</td>
+                            <td>Conférence : Souveraineté des données et infrastructures Big Data</td>
+                            <td>Samuel Okechukwu</td>
+                            <td>Auditorium B</td>
+                        </tr>
+                        <tr>
+                            <td>14:00 - 15:30</td>
+                            <td>Session Pitch : Les innovations Tech de demain</td>
+                            <td>Sélection Startups L1</td>
+                            <td>Salle Horizon</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- CONTENU JOUR 3 -->
+            <div id="day3" class="tab-content">
+                <table class="program-table">
+                    <thead>
+                        <tr>
+                            <th>Horaires</th>
+                            <th>Sessions &amp; Thématiques</th>
+                            <th>Intervenants</th>
+                            <th>Lieu</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>10:00 - 12:00</td>
+                            <td>Panel : L'avenir du code et de la formation des ingénieurs</td>
+                            <td>Enseignants &amp; Experts Tech</td>
+                            <td>Auditorium A</td>
+                        </tr>
+                        <tr>
+                            <td>14:00 - 16:00</td>
+                            <td>Remise des prix et Cérémonie de clôture officielle</td>
+                            <td>Comité d'organisation</td>
+                            <td>Hall Principal</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- SECTION THÉMATIQUES CLÉS (Grille 2x2 propre et sémantique) -->
+        <section class="themes-section fade-in-scroll">
+            <h2 class="section-title">Les Grandes Thématiques 2026</h2>
+            <div class="grid-2x2">
+                <article class="theme-card-item">
+                    <i class="bi bi-cpu theme-card-icon"></i>
+                    <h3>Intelligence Artificielle</h3>
+                    <p>Modèles de langage et vision par ordinateur appliqués aux réalités africaines.</p>
+                </article>
+                <article class="theme-card-item">
+                    <i class="bi bi-wallet2 theme-card-icon"></i>
+                    <h3>Fintech &amp; Web3</h3>
+                    <p>Inclusion financière, monnaies numériques et décentralisation du commerce.</p>
+                </article>
+                <article class="theme-card-item">
+                    <i class="bi bi-shield-lock theme-card-icon"></i>
+                    <h3>Cybersécurité &amp; Data</h3>
+                    <p>Protection des infrastructures critiques et gouvernance locale de la donnée.</p>
+                </article>
+                <article class="theme-card-item">
+                    <i class="bi bi-globe2 theme-card-icon"></i>
+                    <h3>Entrepreneuriat Tech</h3>
+                    <p>Stratégies de croissance pour transformer les innovations locales en succès mondiaux.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- BOUTON RETOUR EN HAUT -->
+    <button id="backToTop" aria-label="Retourner en haut de la page"><i class="bi bi-arrow-up"></i></button>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>AfriConnect</h3>
+                <p>Le carrefour annuel de l'écosystème numérique africain.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Liens Rapides</h3>
+                <p><a href="programme.html">Programme</a></p>
+                <p><a href="contact.html">S'inscrire</a></p>
+            </div>
+            <div class="footer-col">
+                <h3>Suivez-nous</h3>
+                <div class="social-links">
+                    <a href="#" aria-label="Lien Twitter"><i class="bi bi-twitter-x"></i></a>
+                    <a href="#" aria-label="Lien LinkedIn"><i class="bi bi-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; <span class="dynamic-year"></span> AfriConnect Summit. Tous droits réservés. Examen Web L1.
+        </div>
+    </footer>
+
+    <!-- Script principal -->
+    <script src="js/main.js"></script>
+    
+</body>
+</html>
