@@ -1,0 +1,51 @@
+/* 
+   1. VARIABLES ET SYSTEME DE THEME (DESIGN SYSTEM OBLIGATOIRE)
+    */
+:root {
+    /* Thème Clair par défaut */
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8f9fa;
+    --text-primary: #1a1a1a;
+    --text-secondary: #606060;
+    --accent-color: #e65100; /* Orange panafricain */
+    --accent-hover: #bf360c;
+    --border-color: #e0e0e0;
+    --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    
+    /* Polices imposées par le cahier des charges */
+    --font-title: 'Syne', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    
+    --transition-fast: all 0.3s ease;
+    --border-radius: 12px;
+}
+
+[data-theme="dark"] {
+    /* Thème Sombre activé dynamiquement par JavaScript */
+    --bg-primary: #121212;
+    --bg-secondary: #1e1e1e;
+    --text-primary: #f5f5f5;
+    --text-secondary: #b0b0b0;
+    --border-color: #333333;
+    --card-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Réinitialisation générale */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: var(--font-body);
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    transition: var(--transition-fast);
+}
+
+body {
+    overflow-x: hidden;
+}
+
