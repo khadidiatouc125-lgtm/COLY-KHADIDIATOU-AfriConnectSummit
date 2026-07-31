@@ -49,3 +49,209 @@ body {
     overflow-x: hidden;
 }
 
+/* ==========================================================================
+   2. COMPOSANTS GENERAUX (NAVBAR, FOOTER, BOUTONS)
+   ========================================================================== */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex; /* Flexbox 1 */
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background: transparent;
+    transition: var(--transition-fast);
+}
+
+.navbar.scrolled {
+    background: var(--bg-primary);
+    box-shadow: var(--card-shadow);
+    padding: 15px 5%;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav-links a {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition-fast);
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--accent-color);
+}
+
+.nav-tools {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.theme-toggle, .hamburger {
+    background: none;
+    border: none;
+    color: var(--text-primary);
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: var(--transition-fast);
+}
+
+.hamburger {
+    display: none;
+}
+
+/* Footer (Mise en page sémantique multi-colonnes) */
+.main-footer {
+    background: var(--bg-secondary);
+    padding: 50px 5% 20px;
+    border-top: 1px solid var(--border-color);
+    margin-top: 60px;
+}
+
+.footer-container {
+    display: flex; /* Flexbox 2 */
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-col h3 {
+    font-family: var(--font-title);
+    margin-bottom: 20px;
+}
+
+.footer-col p, .footer-col a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.footer-col a:hover {
+    color: var(--accent-color);
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    font-size: 1.5rem;
+}
+
+.social-links a {
+    color: var(--text-secondary);
+    transition: var(--transition-fast);
+}
+
+.social-links a:hover {
+    color: var(--accent-color);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+/* Boutons Système */
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition-fast);
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn-primary {
+    background: var(--accent-color);
+    color: #ffffff;
+    border: none;
+}
+
+.btn-primary:hover {
+    background: var(--accent-hover);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--text-primary);
+    border: 2px solid var(--text-primary);
+}
+
+.btn-secondary:hover {
+    background: var(--text-primary);
+    color: var(--bg-primary);
+}
+
+/* Bouton Back to Top */
+#backToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: var(--accent-color);
+    color: white;
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none; /* Contrôlé par le JS */
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--card-shadow);
+    transition: var(--transition-fast);
+    z-index: 99;
+}
+
+#backToTop:hover {
+    transform: translateY(-5px);
+}
+
+/* En-tête des pages internes */
+.internal-hero {
+    padding: 160px 5% 60px;
+    background: var(--bg-secondary);
+    text-align: center;
+}
+
+.internal-hero h1 {
+    font-family: var(--font-title);
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+
+.breadcrumb {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.breadcrumb a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+/* Titres globaux de sections */
+.section-title {
+    font-family: var(--font-title);
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 40px;
+}
