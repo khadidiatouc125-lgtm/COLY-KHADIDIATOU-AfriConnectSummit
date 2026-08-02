@@ -255,3 +255,576 @@ body {
     text-align: center;
     margin-bottom: 40px;
 }
+/* ==========================================================================
+   3. STYLES SPECIFIQUES : PAGE D'ACCUEIL (INDEX.HTML)
+   ========================================================================== */
+.hero-home {
+    min-height: 100vh;
+    display: flex; /* Flexbox 3 */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 120px 5% 60px;
+    background-image: url("../images/img6.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-home h1 {
+    font-family: var(--font-title);
+    font-size: 4rem;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    animation: fadeIn 1s forwards;
+}
+
+.hero-highlight {
+    color: var(--accent-color);
+}
+
+.hero-home p {
+    font-size: 1.3rem;
+    color: var(--text-secondary);
+    margin-bottom: 35px;
+}
+
+.hero-ctas {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 50px;
+}
+
+/* Compte à Rebours Synchrone */
+.countdown-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.countdown-item {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    padding: 15px 25px;
+    border-radius: var(--border-radius);
+    min-width: 95px;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.countdown-item span {
+    display: block;
+    font-size: 2.2rem;
+    font-weight: 700;
+    font-family: var(--font-title);
+    color: var(--accent-color);
+}
+
+/* Grilles structurelles (Usage Grid 1) */
+.grid-4cols {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    padding: 60px 5%;
+}
+
+.container-reset {
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+/* Cartes de statistiques */
+.stat-card {
+    background: var(--bg-secondary);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    text-align: center;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--card-shadow);
+}
+
+.stat-card h2 {
+    font-size: 3rem;
+    font-family: var(--font-title);
+    color: var(--accent-color);
+    margin-bottom: 5px;
+}
+
+/* Section Pourquoi participer */
+.features-section {
+    padding: 60px 5%;
+}
+
+.features-container {
+    display: flex; /* Flexbox 4 */
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.feature-card {
+    flex: 1;
+    min-width: 280px;
+    padding: 30px;
+    background: var(--bg-secondary);
+    border-radius: var(--border-radius);
+    text-align: center;
+    border: 1px solid var(--border-color);
+    transition: var(--transition-fast);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.feature-card h3 {
+    font-family: var(--font-title);
+    margin-bottom: 12px;
+}
+
+.feature-card p {
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+/* Section Intervenants Vedettes de l'Accueil */
+.featured-speakers {
+    padding: 60px 5%;
+}
+
+.center-btn-container {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Zone Sponsors Multi-niveaux (Flexbox) */
+.sponsors-zone {
+    padding: 60px 5%;
+    text-align: center;
+}
+
+.section-title-sponsors {
+    font-family: var(--font-title);
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.sponsor-level {
+    display: flex; /* Flexbox 5 */
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-bottom: 40px;
+}
+
+.sponsor-level img {
+    filter: grayscale(100%);
+    opacity: 0.6;
+    transition: var(--transition-fast);
+    object-fit: contain;
+}
+
+.sponsor-level img:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+/* ==========================================================================
+   4. STYLES SPECIFIQUES : PAGE PROGRAMME (PROGRAMME.HTML)
+   ========================================================================== */
+.tabs-container {
+    display: flex; /* Flexbox 6 */
+    justify-content: center;
+    gap: 15px;
+    padding: 40px 5% 10px;
+}
+
+.tab-btn {
+    padding: 12px 30px;
+    border: 1px solid var(--border-color);
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    cursor: pointer;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    font-family: var(--font-body);
+    transition: var(--transition-fast);
+}
+
+.tab-btn.active {
+    background: var(--accent-color);
+    color: #ffffff;
+    border-color: var(--accent-color);
+}
+
+.program-sections {
+    padding: 20px 5% 60px;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+/* Tableau stylisé sans attributs de mise en forme */
+.program-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--bg-primary);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+}
+
+.program-table th, .program-table td {
+    padding: 20px 25px;
+    text-align: left;
+}
+
+.program-table th {
+    background: var(--bg-secondary);
+    font-family: var(--font-title);
+    font-weight: 700;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.program-table tr {
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Alternance automatique de couleur obligatoire */
+.program-table tr:nth-child(even) {
+    background: var(--bg-secondary);
+}
+
+/* Grille thématique 2x2 (Usage Grid 2) */
+.themes-section {
+    padding: 40px 5% 60px;
+}
+
+.grid-2x2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.theme-card-item {
+    background: var(--bg-secondary);
+    padding: 35px;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--card-shadow);
+}
+
+.theme-card-icon {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.theme-card-item h3 {
+    font-family: var(--font-title);
+    margin-bottom: 10px;
+}
+
+.theme-card-item p {
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+/* ==========================================================================
+   5. STYLES SPECIFIQUES : PAGE INTERVENANTS (INTERVENANTS.HTML)
+   ========================================================================== */
+.filter-section {
+    padding: 30px 5% 10px;
+}
+
+.filter-container {
+    display: flex; /* Flexbox 7 */
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.filter-btn {
+    padding: 10px 24px;
+    border: 1px solid var(--border-color);
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    border-radius: 30px;
+    cursor: pointer;
+    font-family: var(--font-body);
+    font-weight: 500;
+    transition: var(--transition-fast);
+}
+
+.filter-btn.active, .filter-btn:hover {
+    background: var(--text-primary);
+    color: var(--bg-primary);
+    border-color: var(--text-primary);
+}
+
+.speakers-grid-section {
+    padding: 20px 5% 60px;
+}
+
+/* Cartes Intervenants universelles */
+.speaker-card {
+    background: var(--bg-secondary);
+    padding: 25px;
+    border-radius: var(--border-radius);
+    text-align: center;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--card-shadow);
+    transition: var(--transition-fast);
+}
+
+.speaker-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.1);
+}
+
+.speaker-card img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: calc(var(--border-radius) - 4px);
+    margin-bottom: 15px;
+}
+
+.speaker-card h3 {
+    font-family: var(--font-title);
+    font-size: 1.3rem;
+    margin-bottom: 6px;
+}
+
+.speaker-role {
+    color: var(--accent-color);
+    font-weight: 500;
+    font-size: 0.95rem;
+    margin-bottom: 4px;
+}
+
+.speaker-country {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+/* Classe JavaScript pour le masquage du filtre */
+.speaker-item.hidden {
+    display: none;
+}
+
+/* ==========================================================================
+   6. STYLES SPECIFIQUES : PAGE INSCRIPTION & CONTACT (CONTACT.HTML)
+   ========================================================================== */
+.contact-wrapper {
+    display: flex; /* Flexbox 8 */
+    padding: 50px 5% 60px;
+    gap: 50px;
+}
+
+.form-side {
+    flex: 1.3;
+}
+
+.info-side {
+    flex: 1;
+}
+
+/* Formulaire d'inscription */
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.form-control {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid var(--border-color);
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    border-radius: var(--border-radius);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    outline: none;
+    transition: var(--transition-fast);
+}
+
+.form-control:focus {
+    border-color: var(--accent-color);
+}
+
+/* Validation visuelle dynamique par le script JS */
+.form-control.valid {
+    border-color: #2e7d32;
+    background-color: rgba(46, 125, 50, 0.02);
+}
+
+.form-control.invalid {
+    border-color: #d32f2f;
+    background-color: rgba(211, 47, 47, 0.02);
+}
+
+.error-msg {
+    color: #d32f2f;
+    font-size: 0.8rem;
+    margin-top: 6px;
+    display: none;
+}
+
+.success-alert {
+    background: #e8f5e9;
+    color: #2e7d32;
+    padding: 18px;
+    border-radius: var(--border-radius);
+    margin-bottom: 25px;
+    border: 1px solid #c8e6c9;
+    display: none;
+    font-weight: 500;
+}
+
+/* Accordéon FAQ 100% CSS Pur (Exigence technique) */
+.accordion {
+    margin-bottom: 40px;
+}
+
+.accordion-item {
+    background: var(--bg-secondary);
+    margin-bottom: 12px;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+}
+
+.accordion-item input[type="checkbox"] {
+    display: none;
+}
+
+.accordion-title {
+    display: block;
+    padding: 18px 20px;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+    user-select: none;
+}
+
+.accordion-title::after {
+    content: '+';
+    position: absolute;
+    right: 20px;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+.accordion-content {
+    max-height: 0;
+    padding: 0 20px;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* Déclencheurs CSS via les sélecteurs de frères */
+.accordion-item input[type="checkbox"]:checked ~ .accordion-content {
+    max-height: 200px;
+    padding: 0 20px 18px;
+}
+
+.accordion-item input[type="checkbox"]:checked ~ .accordion-title::after {
+    transform: rotate(45deg);
+}
+
+/* Conteneur d'intégration Google Maps épuré */
+.map-container {
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    line-height: 0;
+}
+
+/* ==========================================================================
+   7. ANIMATIONS ET MEDIAS QUERIES RESPONSIVE
+   ========================================================================== */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Classes pour l'API IntersectionObserver du JS */
+.fade-in-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Adaptabilité aux écrans (Responsive Design) */
+@media (max-width: 1200px) {
+    .grid-4cols {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+    
+    .nav-links {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background: var(--bg-primary);
+        flex-direction: column;
+        padding-top: 40px;
+        gap: 35px;
+        transition: var(--transition-fast);
+        box-shadow: var(--card-shadow);
+    }
+    
+    .nav-links.open {
+        left: 0;
+    }
+    
+    .hero-home h1 {
+        font-size: 2.6rem;
+    }
+    
+    .grid-4cols, .grid-2x2 {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-wrapper {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .program-table th, .program-table td {
+        padding: 15px;
+        font-size: 0.9rem;
+    }
+}
