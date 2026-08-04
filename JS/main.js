@@ -114,3 +114,217 @@ function initCountdown() {
         if (sEl) sEl.innerText = String(seconds).padStart(2, '0');
     }, 1000);
 }
+/* ==========================================================================
+   4. ANIMATIONS D'APPARITION ET CHIFFRES ANIMÉS AU SCROLL
+   ========================================================================== */
+function initScrollAnimations() {
+    const targets = document.querySelectorAll(".fade-in-scroll");
+    if (targets.length === 0) return;
+    
+    // Utilisation de l'API native IntersectionObserver recommandée par ton prof
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                observer.unobserve(entry.target); // L'animation ne s'exécute qu'une seule fois
+            }
+        });
+    }, { threshold: 0.1 });
+
+    targets.forEach(target => observer.observe(target));
+}
+
+function initAnimatedCounters() {
+    const counters = document.querySelectorAll(".counter-value");
+    const section = document.getElementById("stat-section");
+    if (!section || counters.length === 0) return;
+    let started = false;
+
+    const observer = new IntersectionObserver((entries) => {
+        if (entries[0].isIntersecting && !started) {
+            started = true;
+            counters.forEach(counter => {
+                const target = parseInt(counter.getAttribute("data-target"));
+                const duration = 2000; // Durée totale de l'effet : 2 secondes
+                const increment = target / (duration / 16);
+                let current = 0;
+
+                const updateCount = () => {
+                    current += increment;
+                    if (current < target) {
+                        counter.innerText = Math.ceil(current);
+                        requestAnimationFrame(updateCount); // Boucle d'animation fluide
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+                updateCount();
+            });
+        }
+    }, { threshold: 0.3 });
+
+    observer.observe(section);
+}
+
+/* ==========================================================================
+   5. NAVIGATION PAR ONGLETS DU PROGRAMME (programme.html)
+   ========================================================================== */
+function initProgramTabs() {
+    const tabs = document.querySelectorAll(".tab-btn");
+    const contents = document.querySelectorAll(".tab-content");
+    if (tabs.length === 0 || contents.length === 0) return;
+
+    tabs.forEach(tab => {
+        tab.addEventListener("click", () => {
+            // Désactivation de l'ensemble des boutons et des contenus
+            tabs.forEach(t => t.classList.remove("active"));
+            contents.forEach(c => c.classList.remove("active"));
+
+            // Activation de l'onglet cliqué et du panneau correspondant
+            tab.classList.add("active");
+            const activeDayId = tab.getAttribute("data-day");
+            const targetContent = document.getElementById(activeDayId);
+            if (targetContent) targetContent.classList.add("active");
+        });
+    });
+}
+
+/* ==========================================================================
+   6. FILTRAGE DYNAMIQUE DES INTERVENANTS (intervenants.html)
+   ========================================================================== */
+function initSpeakerFilter() {
+    const filterBtns = document.querySelectorAll(".filter-btn");
+    const speakers = document.querySelectorAll(".speaker-item");
+    if (filterBtns.length === 0 || speakers.length === 0) return;
+
+    filterBtns.forEach(btn => {
+        btn.addEventListener("click", () => {
+            filterBtns.forEach(b => b.classList.remove("active"));
+            btn.classList.add("active");
+
+            const filterValue = btn.getAttribute("data-filter");
+
+            speakers.forEach(speaker => {
+                const category = speaker.getAttribute("data-category");
+                // Affichage si "Tous" est sélectionné ou si la catégorie correspond
+                if (filterValue === "all" || category === filterValue) {
+                    speaker.classList.remove("hidden");
+                } else {
+                    speaker.classList.add("hidden");
+                }
+            });
+        });
+    });
+}
+
+/* ==========================================================================
+   7. VALIDATION DU FORMULAIRE D'INSCRIPTION ET RETOURS VISUELS (contact.html)
+   ========================================================================== */
+function initFormValidation() {
+    const form = document.getElementById("registrationForm");
+    if (!form) return;
+    
+    form.addEventListener("submit", (e) => {
+        e.preventDefault(); // Blocage de la soumission native pour l'analyse JS
+        let isFormValid = true;
+
+        // Validation du champ Nom Complet
+        const name = document.getElementById("fullName");
+        if (name && name.value.trim() === "") {
+            showFieldError(name, "Le nom complet est obligatoire.");
+            isFormValid = false;
+        } else if (name) {
+            showFieldSuccess(name);
+        }
+
+        // Validation du champ Email via Expression Régulière (Regex)
+        const email = document.getElementById("email");
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (email && !emailRegex.test(email.value.trim())) {
+            showFieldError(email, "Veuillez entrer une adresse email valide.");
+            isFormValid = false;
+        } else if (email) {
+            showFieldSuccess(email);
+        }
+
+        // Validation du Téléphone (Exigence minimale de 8 chiffres)
+        const phone = document.getElementById("phone");
+        if (phone && phone.value.trim().length < 8) {
+            showFieldError(phone, "Le numéro doit comporter au moins 8 chiffres.");
+            isFormValid = false;
+        } else if (phone) {
+            showFieldSuccess(phone);
+        }
+
+        // Validation du Message / Motivation (Minimum de 20 caractères exigé)
+        const motivation = document.getElementById("motivation");
+        if (motivation && motivation.value.trim().length < 20) {
+            showFieldError(motivation, "Votre motivation doit faire au moins 20 caractères.");
+            isFormValid = false;
+        } else if (motivation) {
+            showFieldSuccess(motivation);
+        }
+
+        // Exécution de l'action de succès si aucun champ n'est en erreur
+        if (isFormValid) {
+            const successAlert = document.getElementById("successAlert");
+            if (successAlert) {
+                successAlert.style.display = "block";
+                form.reset(); // Réinitialisation de tous les champs du formulaire
+                
+                // Suppression des bordures vertes de validation après envoi
+                document.querySelectorAll(".form-control").forEach(input => input.classList.remove("valid"));
+                
+                // Défilement fluide vers le haut pour rendre le message visible
+                window.scrollTo({ top: successAlert.offsetTop - 100, behavior: 'smooth' });
+            }
+        }
+    });
+}
+
+function showFieldError(input, message) {
+    input.classList.remove("valid");
+    input.classList.add("invalid");
+    const errorDiv = input.nextElementSibling;
+    if (errorDiv && errorDiv.classList.contains("error-msg")) {
+        errorDiv.innerText = message;
+        errorDiv.style.display = "block";
+    }
+}
+
+function showFieldSuccess(input) {
+    input.classList.remove("invalid");
+    input.classList.add("valid");
+    const errorDiv = input.nextElementSibling;
+    if (errorDiv && errorDiv.classList.contains("error-msg")) {
+        errorDiv.style.display = "none";
+    }
+}
+
+/* ==========================================================================
+   8. UTILITIES (Bouton Back To Top et Injection de la Date Dynamique)
+   ========================================================================== */
+function initBackToTop() {
+    const btn = document.getElementById("backToTop");
+    if (!btn) return;
+
+    window.addEventListener("scroll", () => {
+        // Apparition du bouton dès que le défilement vertical dépasse 300px
+        if (window.scrollY > 300) {
+            btn.style.display = "flex";
+        } else {
+            btn.style.display = "none";
+        }
+    });
+
+    btn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+}
+
+function injectDynamicYear() {
+    const currentYear = new Date().getFullYear();
+    document.querySelectorAll(".dynamic-year").forEach(el => {
+        el.innerText = currentYear; // Injection automatique dans le footer
+    });
+}
