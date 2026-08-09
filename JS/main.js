@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 /* 1. GESTION DU MODE SOMBRE (Persistence via LocalStorage) */
 function initDarkMode() {
-    const toggleBtn = document.getElementById("themeToggleBtn");
+    const toggleBtn = document.getElementById("btn-dark-mode");
     if (!toggleBtn) return;
 
     // Récupération du thème sauvegardé ou application du mode clair par défaut
@@ -37,7 +37,7 @@ function initDarkMode() {
 }
 
 function updateThemeIcon(theme) {
-    const icon = document.querySelector("#themeToggleBtn i");
+    const icon = document.querySelector("btn-dark-mode i");
     if (!icon) return;
     // Changement de la classe Bootstrap Icons
     if (theme === "dark") {
@@ -46,6 +46,8 @@ function updateThemeIcon(theme) {
         icon.className = "bi bi-moon-fill";
     }
 }
+
+
 
 /* 2. INTERACTIONS DE LA NAVBAR ET DU MENU RESPONSIVE HAMBURGER */
 function initNavbarScroll() {

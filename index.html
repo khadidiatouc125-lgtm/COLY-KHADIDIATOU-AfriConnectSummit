@@ -1,23 +1,21 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AfriConnectSummit - le plus grand sommet Tech d'Afrique de l'Ouest à Dakar</title>
-    <!-- GOOGLE FONTS -->
-    <link rel="stylesheet" href="preconnect" href="https://fonts.googleapis.com">
-    <link rel="stylesheet" href="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
-
-    
-    <!-- Notre feuille de style personnalisée -->>
-    <link rel="stylesheet" href="CSS/style.css">
-    <!-- ICONS BOOSTRAP -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boostrap-icons@1.11.3/font/boostrap-icons.min.css"> 
-    
+    <title>AfriConnect Summit 2026 - Accueil</title>
+    <!-- Chargement des polices Google Fonts obligatoires -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Inter:wght@400;500;600&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    <!-- CDN Bootstrap Icons pour les icônes du site -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boostrap-icons@1.11.3/font/boostrap-icons.min.css">
+    <!-- Fichier CSS unique obligatoire -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-        <!-- NAVBAR FIXE -->
+
+    <!-- NAVBAR FIXE -->
     <header>
         <nav class="navbar" aria-label="Navigation principale">
             <div class="logo"><strong>AfriConnect Summit 2026</strong></div>
@@ -27,13 +25,12 @@
                 <li><a href="intervenants.html">Intervenants</a></li>
                 <li><a href="contact.html">Inscription</a></li>
             </ul>
-            <div class="nav-tools">
-                <button id="themeToggleBtn" class="theme-toggle" aria-label="Changer de thème">
-                    <i class="bi bi-moon-fill"></i>
-                </button>
-                <button id="hamburgerBtn" class="hamburger" aria-label="Ouvrir le menu mobile">
+            <div class="d-flex align-items-center gap-2">
+                    <button id="btn-dark-mode"><i class="bi bi-moon-fill"></i>🌙 Mode Sombre</button>
+                    <button id="hamburgerBtn" class="hamburger" aria-label="Ouvrir le menu mobile">
                     <i class="bi bi-list"></i>
                 </button>
+
             </div>
         </nav>
     </header>
@@ -105,25 +102,25 @@
             <h2 class="section-title">Intervenants Vedettes</h2>
             <div class="grid-4cols container-reset">
                 <article class="speaker-card">
-                    <img src="images/img2.jpg" alt="Portrait de Amina Diallo">
+                    <img src="images/imgF1.jpg" alt="Portrait de Amina Diallo">
                     <h3>Amina Diallo</h3>
                     <p class="speaker-role">Experte Vision par Ordinateur</p>
                     <p class="speaker-country">Sénégal</p>
                 </article>
                 <article class="speaker-card">
-                    <img src="https://unsplash.com" alt="Portrait de Kofi Mensah">
+                    <img src="images/imgH1.jpg" alt="Portrait de Kofi Mensah">
                     <h3>Kofi Mensah</h3>
                     <p class="speaker-role">Fondateur Pan-African VC</p>
                     <p class="speaker-country">Ghana</p>
                 </article>
                 <article class="speaker-card">
-                    <img src="https://unsplash.com" alt="Portrait de Fatou Camara">
+                    <img src="images/imgF2.jpg" alt="Portrait de Fatou Camara">
                     <h3>Fatou Camara</h3>
                     <p class="speaker-role">Product Designer Senior</p>
                     <p class="speaker-country">Côte d'Ivoire</p>
                 </article>
                 <article class="speaker-card">
-                    <img src="https://unsplash.com" alt="Portrait de Samuel Okechukwu">
+                    <img src="images/imgH2.jpg" alt="Portrait de Samuel Okechukwu">
                     <h3>Samuel Okechukwu</h3>
                     <p class="speaker-role">Architecte Big Data</p>
                     <p class="speaker-country">Nigeria</p>
@@ -139,17 +136,32 @@
             <h2 class="section-title-sponsors">Nos Sponsors</h2>
             
             <div class="sponsor-level lvl-gold">
-                <img src="https://unsplash.com" alt="Logo Sponsor Or Fictif 1">
-                <img src="https://unsplash.com" alt="Logo Sponsor Or Fictif 2">
+                <div class="sponsors-item">
+                    <img src="images/logoO2.jpg" alt="Logo Sponsor Or Fictif 1">
+                    <p>Orange</p>
+                </div>
+                <div class="sponsors-item">    
+                    <img src="images/logo1W.jpg" alt="Logo Sponsor Or Fictif 2">
+                    <p>Wave</p>
+                </div>    
             </div>
             
             <div class="sponsor-level lvl-silver">
-                <img src="https://unsplash.com" alt="Logo Sponsor Argent Fictif 1">
-                <img src="https://unsplash.com" alt="Logo Sponsor Argent Fictif 2">
+                <div class="sponsors-item">
+                    <img src="images/logoS.jpg" alt="Logo Sponsor Argent Fictif 1">
+                    <p>Sonatel</p>
+                </div>
+                <div> 
+                    <img src="images/logoAWS.jpg" alt="Logo Sponsor Argent Fictif 2">
+                    <p>AWS</p>
+                </div>  
             </div>
             
             <div class="sponsor-level lvl-bronze">
-                <img src="https://unsplash.com" alt="Logo Sponsor Bronze Fictif 1">
+                <div class="sponsors-item">
+                    <img src="images/logoM.jpg" alt="Logo Sponsor Bronze Fictif 1">
+                    <p>Microsoft</p>
+                </div>
             </div>
         </section>
     </main>
@@ -172,8 +184,9 @@
             <div class="footer-col">
                 <h3>Suivez-nous</h3>
                 <div class="social-links">
-                    <a href="#" aria-label="Lien Twitter"><i class="bi bi-twitter-x"></i></a>
-                    <a href="#" aria-label="Lien LinkedIn"><i class="bi bi-linkedin"></i></a>
+                    <a href="https://www.facebook.com"><i class="bi bi-facebook"></i></a>
+                    <a href="https://www.instagram.com"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.twitter.com"><i class="bi bi-twitter"></i></a>
                 </div>
             </div>
         </div>
@@ -184,8 +197,5 @@
 
     <!-- Script principal -->
     <script src="js/main.js"></script>
-
-    
-    
 </body>
 </html>

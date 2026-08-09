@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AfriConnectSummit - Intervenants</title>
-    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body> <!-- NAVBAR FIXE -->
     <header>
@@ -16,11 +16,9 @@
                 <li><a href="intervenants.html" class="active">Intervenants</a></li>
                 <li><a href="contact.html">Inscription</a></li>
             </ul>
-            <div class="nav-tools">
-                <button id="themeToggleBtn" class="theme-toggle" aria-label="Changer de thème">
-                    <i class="bi bi-moon-fill"></i>
-                </button>
-                <button id="hamburgerBtn" class="hamburger" aria-label="Ouvrir le menu mobile">
+            <div class="d-flex align-items-center gap-2">
+                    <button id="btn-dark-mode">🌙 Mode Sombre</button>
+                    <button id="hamburgerBtn" class="hamburger" aria-label="Ouvrir le menu mobile">
                     <i class="bi bi-list"></i>
                 </button>
             </div>
@@ -38,6 +36,7 @@
 
         <!-- FILTRAGE DYNAMIQUE JAVASCRIPT -->
         <section class="filter-section">
+            <h2 class="visually-hidden">Filtrer les intervenants</h2>
             <div class="filter-container">
                 <button class="filter-btn active" data-filter="all">Tous</button>
                 <button class="filter-btn" data-filter="ia">IA &amp; Tech</button>
@@ -49,18 +48,19 @@
 
         <!-- GRILLE D'INTERVENANTS (9 CARTES EXIGÉES) -->
         <section class="speakers-grid-section">
+            <h2 class="visually-hidden">Liste des intervenants</h2>
             <div class="grid-4cols container-reset">
                 <!-- Intervenant 1 - IA -->
                 <article class="speaker-card speaker-item" data-category="ia">
-                    <img src="images/img2.jpg" alt="Portrait de Amina Diallo">
-                    <h3>Amina Diallo</h3>
+                    <img src="images/imgF1.jpg" alt="Portrait de Amina Diallo">
+                    <h2>Amina Diallo</h2>
                     <p class="speaker-role">Experte Vision par Ordinateur</p>
                     <p class="speaker-country">Sénégal</p>
                 </article>
 
                 <!-- Intervenant 2 - Business -->
                 <article class="speaker-card speaker-item" data-category="business">
-                    <img src="images/img9.jpg" alt="Portrait de Kofi Mensah">
+                    <img src="images/imgH1.jpg" alt="Portrait de Kofi Mensah">
                     <h3>Kofi Mensah</h3>
                     <p class="speaker-role">Fondateur Pan-African VC</p>
                     <p class="speaker-country">Ghana</p>
@@ -68,7 +68,7 @@
 
                 <!-- Intervenant 3 - Design -->
                 <article class="speaker-card speaker-item" data-category="design">
-                    <img src="images/img4.jpg" alt="Portrait de Fatou Camara">
+                    <img src="images/imgF2.jpg" alt="Portrait de Fatou Camara">
                     <h3>Fatou Camara</h3>
                     <p class="speaker-role">Product Designer Senior</p>
                     <p class="speaker-country">Côte d'Ivoire</p>
@@ -76,7 +76,7 @@
 
                 <!-- Intervenant 4 - Data -->
                 <article class="speaker-card speaker-item" data-category="data">
-                    <img src="images/img8.jpg" alt="Portrait de Samuel Okechukwu">
+                    <img src="images/imgH2.jpg" alt="Portrait de Samuel Okechukwu">
                     <h3>Samuel Okechukwu</h3>
                     <p class="speaker-role">Architecte de Données Big Data</p>
                     <p class="speaker-country">Nigeria</p>
@@ -84,7 +84,7 @@
 
                 <!-- Intervenant 5 - IA -->
                 <article class="speaker-card speaker-item" data-category="ia">
-                    <img src="images/img10.jpg" alt="Portrait de Dr. Eliane Zongo">
+                    <img src="images/imgF3.jpg" alt="Portrait de Dr. Eliane Zongo">
                     <h3>Dr. Eliane Zongo</h3>
                     <p class="speaker-role">Chercheuse NLP Africain</p>
                     <p class="speaker-country">Burkina Faso</p>
@@ -92,7 +92,7 @@
 
                 <!-- Intervenant 6 - Business -->
                 <article class="speaker-card speaker-item" data-category="business">
-                    <img src="images/img3.jpg" alt="Portrait de Tariq Yusuf">
+                    <img src="images/imgH3.jpg" alt="Portrait de Tariq Yusuf">
                     <h3>Tariq Yusuf</h3>
                     <p class="speaker-role">Directeur Incubation &amp; Stratégie</p>
                     <p class="speaker-country">Maroc</p>
@@ -100,7 +100,7 @@
 
                 <!-- Intervenant 7 - Design -->
                 <article class="speaker-card speaker-item" data-category="design">
-                    <img src="images/img7.jpg" alt="Portrait de Zola Mbeki">
+                    <img src="images/imgF4.jpg" alt="Portrait de Zola Mbeki">
                     <h3>Zola Mbeki</h3>
                     <p class="speaker-role">Spécialiste Identités Visuelles</p>
                     <p class="speaker-country">Afrique du Sud</p>
@@ -108,7 +108,7 @@
 
                 <!-- Intervenant 8 - Data -->
                 <article class="speaker-card speaker-item" data-category="data">
-                    <img src="images/img12.jpg" alt="Portrait de Moïse Tounkara">
+                    <img src="images/imgH4.jpg" alt="Portrait de Moïse Tounkara">
                     <h3>Moïse Tounkara</h3>
                     <p class="speaker-role">Analyst d'Impact Data-Driven</p>
                     <p class="speaker-country">Guinée</p>
@@ -116,7 +116,7 @@
 
                 <!-- Intervenant 9 - IA -->
                 <article class="speaker-card speaker-item" data-category="ia">
-                    <img src="images/img11.jpg" alt="Portrait de Chana Kimani">
+                    <img src="images/imgF5.jpg" alt="Portrait de Chana Kimani">
                     <h3>Chana Kimani</h3>
                     <p class="speaker-role">Développeuse IA Générative</p>
                     <p class="speaker-country">Kenya</p>
@@ -143,8 +143,9 @@
             <div class="footer-col">
                 <h3>Suivez-nous</h3>
                 <div class="social-links">
-                    <a href="#" aria-label="Lien Twitter"><i class="bi bi-twitter-x"></i></a>
-                    <a href="#" aria-label="Lien LinkedIn"><i class="bi bi-linkedin"></i></a>
+                    <a href="https://www.facebook.com"><i class="bi bi-facebook"></i></a>
+                    <a href="https://www.instagram.com"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.twitter.com"><i class="bi bi-twitter"></i></a>    
                 </div>
             </div>
         </div>
